@@ -1,0 +1,11 @@
+[project]
+name = "ai-trip-optimiser-deal-hunter"
+version = "0.1.0"
+description = "A self-updating, price-aware concierge agent that continuously optimizes your flights, hotels, and itinerary using multi-agent LLM intelligence."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel",
+    "jupyter",
+    "google-adk"
+]
