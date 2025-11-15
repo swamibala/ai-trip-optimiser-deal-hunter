@@ -57,7 +57,22 @@ The itinerary is **living**, meaning it persists in memory, updates with new inf
 
 ---
 
-## 5. System Architecture
+## 5. Multi-Agent Architecture
+
+```mermaid
+
+graph TD
+  A[Preference Collector Agent] --> B[Flight Search Agent]
+  A --> C[Hotel Search Agent]
+  A --> D[Activity Search Agent]
+  B --> E[Ranking & Optimization Agent]
+  C --> E
+  D --> E
+  E --> F[Itinerary Builder Agent]
+  E --> G[Price Monitor Loop Agent]
+  G --> H[Notification Agent]
+
+```
 
 **Agents & Flow:**
 
