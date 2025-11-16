@@ -16,6 +16,8 @@ preference_collector_agent = Agent(
     Collect information such as origin, destination, travel dates, budget, and interests.
     Ensure all fields except interests are provided by user.
     If any information is missing, ask the user for it.""",
+    output_key="user_preferences",
+    output_schema=UserPreferences,
 )
 
 print("✅ preference_collector_agent created.")
