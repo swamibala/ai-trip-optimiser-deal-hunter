@@ -182,3 +182,31 @@ graph TD
 **Submission Track:** Track A — Concierge Agents
 
 This notebook demonstrates a **fully agentic, living, dynamic itinerary system** using **Google ADK + Gemini**, with no OpenAI dependencies.
+
+
+## ⚙️ Setup:
+### Set Up Virtual Environment & Install Dependencies
+In terminal, run:
+
+```
+uv venv --python 3.12
+source .venv/bin/activate
+uv sync
+```
+
+<i>Note: dependencies are defined in pyproject.toml</i>
+
+### Configure your API Keys
+
+**1. Get your API keys**
+
+If you don't have one already, 
+- create [Gemini API key in Google AI Studio](https://aistudio.google.com/app/api-keys)
+- create [SERP API](https://serpapi.com)
+
+**2. Add the key to .env file in the same location as your notebook and add the below lines in it**
+
+```
+GOOGLE_API_KEY=your_google_api_key_here
+SERPAPI_API_KEY=your_serp_api_key_here
+```
