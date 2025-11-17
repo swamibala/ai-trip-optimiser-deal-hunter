@@ -5,8 +5,9 @@ from root_agent.tools import search_hotels
 hotel_search_agent = Agent(
     name="HotelSearchAgent",
     model="gemini-2.5-flash-lite",
-    instruction="""You are a Hotel Search Agent. Read user input about their travel preferences from {user_preferences}.
-    You will use the hotel search tools to find suitable hotel options based on user preferences.""",
+    instruction="""You are a Hotel Search Agent. User has already provided travel preferences in {user_preferences}.
+    Do not ask more followup questions to the user. Just use the hotel search tool to find suitable hotel options.
+    """,
     tools=[search_hotels],
     output_key="hotel_options",
 )

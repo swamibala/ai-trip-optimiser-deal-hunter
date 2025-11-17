@@ -1,5 +1,5 @@
 from .preference_collector_agent import preference_collector_agent
-from .activity_search_agent import activity_search_agent
 from .flight_search_agent import flight_search_agent
 from .hotel_search_agent import hotel_search_agent
 from .recommendation_system import recommendation_system
+from .itinerary_builder_agent import itinerary_builder_agent
