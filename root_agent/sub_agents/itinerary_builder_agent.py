@@ -1,12 +1,27 @@
 from google.adk.agents import Agent
 
 itinerary_builder_agent = Agent(
-    name="ItineraryBuilderAgent",
-    model="gemini-2.5-flash-lite",
-    instruction="""You are an Itinerary Builder Agent. Collect all the available flight options from {flight_options}.
-    Collect all the available hotel options from {hotel_options}.
-    Create a travel itinerary based on the available flight and hotel options.
-    Choose the best combination of flights and hotels to create an optimal travel plan based on user preferences{user_preferences}.""",
+    name="itinerary_builder_agent",
+    model="gemini-2.0-flash",
+    description="Combines all search results into a complete travel itinerary",
+    instruction=(
+        "You are a travel planner. Create a complete, well-organized itinerary "
+        "by combining the search results below.\n"
+        "\n"
+        "**Available Flights:**\n"
+        "{flight_options}\n"  # Reads from state!
+        "\n"
+        "**Available Hotels:**\n"
+        "{hotel_options}\n"  # Reads from state!
+        "\n"
+        "Create a formatted itinerary that:\n"
+        "1. Recommends the BEST option from each category (flights, hotel)\n"
+        "2. Includes estimated total cost\n"
+        "\n"
+        "Format beautifully with clear sections and markdown."
+    ),
+    output_key="final_itinerary"
 )
+
 
 print("✅ itinerary_builder_agent created.")

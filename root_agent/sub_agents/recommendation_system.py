@@ -4,6 +4,7 @@ from .hotel_search_agent import hotel_search_agent
 
 recommendation_system = ParallelAgent(
     name="RecommendationSystem",
-    sub_agents=[flight_search_agent, hotel_search_agent])
+    sub_agents=[flight_search_agent, hotel_search_agent]
+    )
 
 print("✅ recommendation_system created.")
