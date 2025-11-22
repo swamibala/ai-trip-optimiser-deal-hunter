@@ -17,6 +17,11 @@ itinerary_builder_agent = Agent(
         "Create a formatted itinerary that:\n"
         "1. Recommends the BEST option from each category (flights, hotel)\n"
         "2. Includes estimated total cost\n"
+        "3. Stores the baseline prices for future price monitoring\n"
+        "\n"
+        "IMPORTANT: Also extract and store the baseline prices in a structured format:\n"
+        "- Best flight price and details\n"
+        "- Best hotel price per night and details\n"
         "\n"
         "Format beautifully with clear sections and markdown."
     ),
