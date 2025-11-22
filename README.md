@@ -21,6 +21,7 @@ The multi-agent architecture allows for parallel execution of searches (improvin
 ---
 
 ## Architecture
+![Architecture](./architecture.png)
 
 Core to the AI Trip Optimizer is the `trip_optimizer_deal_hunter_agent`—a sequential multi-agent system built with Google's Agent Development Kit. The system follows a three-stage pipeline: preference collection, parallel search, and itinerary generation with baseline price capture.
 
